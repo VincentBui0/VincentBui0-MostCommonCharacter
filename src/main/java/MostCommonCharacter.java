@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class MostCommonCharacter {
     /**
@@ -9,7 +11,7 @@ public class MostCommonCharacter {
      */
     public char recurringChar(String str) {
         // Create a HashMap to store character frequencies
-        java.util.HashMap<Character, Integer> charFrequencies = new java.util.HashMap<>();
+        Map<Character, Integer> charFrequencies = new HashMap<>();
 
         // Iterate through the characters in the input string
         for (char c : str.toCharArray()) {
@@ -25,7 +27,7 @@ public class MostCommonCharacter {
         int maxFrequency = 0;
 
         // Find the character with the highest frequency
-        for (java.util.Map.Entry<Character, Integer> entry : charFrequencies.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : charFrequencies.entrySet()) {
             if (entry.getValue() > maxFrequency) {
                 maxFrequency = entry.getValue();
                 mostCommonChar = entry.getKey();
@@ -35,4 +37,3 @@ public class MostCommonCharacter {
         return mostCommonChar;
     }
 }
-
